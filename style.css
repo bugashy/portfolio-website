@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+#container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#content {
+  background-color: aqua;
+  width: 80%;
+}
+
+#heading {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 10%;
+  background-color: red;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 80%;
+  background-color: greenyellow;
+}
+
+#main-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+#footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 10%;
+  background-color: blueviolet;
+}
+
+.content-box {
+  background-color: black;
+  width: 30%;
+  height: 5%;
+  margin: 10px;
+}
+
+/*CSS above runs by default i think, will change if these parameters met*/
+/*extra small, 600px or below*/
+@media screen and (max-width: 600px) {
+  #content { 
+    background-color: red;
+  }
+
+  #main-content {
+    flex-direction: column;
+  }
+}
+
+/*medium, below 900px but more than 600px*/
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  #content {
+    background-color: green;
+  }
+}
