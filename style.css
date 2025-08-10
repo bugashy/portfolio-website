@@ -148,9 +148,9 @@ body {
 
 /*CSS above runs by default i think, will change if these parameters met*/
 /*extra small, 600px or below*/
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
   #content { 
-    background-color: red;
+    /* background-color: red; */
   }
 
   .elements {
@@ -177,9 +177,9 @@ body {
 
 /*medium, below 900px but more than 600px*/
 /*make elements into rows of 2 instead of rows of 4*/
-@media screen and (max-width: 700px) {
+@media screen and (min-width: 500px) and (max-width: 700px) {
   #content {
-    background-color: green;
+    /* background-color: green; */
   }
 
   .elements {
@@ -195,3 +195,5 @@ body {
     width: 100%;
   }
 }
+
+/*current this one is being skipped i think, i want the text in the heading h1 to get smaller at sub 700px but nothing happens until 500px*/
