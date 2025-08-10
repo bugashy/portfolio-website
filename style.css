@@ -12,9 +12,11 @@
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
-  background-color: rgb(223, 223, 223);
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(229, 229, 243);
+  overflow-x: hidden;
 }
 
 #container {
@@ -28,33 +30,53 @@ body {
 
 #content {
   /* background-color: aqua; */
+  margin-top: 80px;
   width: 80%;
-  height: 100%;
+  height: 80%;
 }
 
 #heading {
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   width: 100%;
   height: 10%;
-  /* background-color: rgb(170, 170, 170); */
-  border-bottom: 4px solid;
-  border-color: rgb(48, 178, 238);
+  padding: 10px;
+  /* border-bottom: 3px solid;
+  border-color: rgb(134, 113, 255); */
   color: rgb(2, 62, 80);
+  background-color: rgb(212, 212, 233);
+}
+
+#heading-options {
+  display: flex;
+  flex-direction: row;
+}
+
+#heading-options > p {
+  padding-left: 10px;
+  font-size: 15px;
 }
 
 #main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   width: 100%;
   height: 97%;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-#about-me {
+#main hr {
+  background-color: rgb(134, 113, 255);
+  width: 100%;
+  height: 4px;
+}
+
+.content-box {
+  color: rgb(2, 62, 80);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,77 +84,82 @@ body {
   margin-left: 10px;
   margin-right: 10px;
   margin-top: 10px;
-  border: 4px solid;
-  border-color: rgb(48, 178, 238);
-  border-radius: 10px;
   padding: 10px;
 }
 
-#main-content {
+.content-inner {
+  display: flex; 
+  justify-content: center;
+  flex-direction: row;
+  width: 50%;
+}
+
+.inner-box {
+  width: 40%;
+  aspect-ratio: 1;
+  background-color: black;
+  margin: 10px;
+}
+
+.elements {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   width: 100%;
-  height: 100%;
 }
 
 #footer {
+  background-color: rgb(212, 212, 233);
+  color: rgb(2, 62, 80);
   display: flex;
-  /* justify-content: center; */
   padding-left: 10px;
+  padding: 20px;
   align-items: center;
   width: 100%;
-  height: 10%;
-  /* background-color: blueviolet; */
-  border-top: 4px solid; 
-  border-color: rgb(48, 178, 238);
-}
-
-.content-box {
-  /* background-color: rgb(255, 231, 19); */
-  width: 30%;
-  /*padding bottom here makes it so that it stays as a square*/
-  /* padding-bottom: 30%; */
-  height: 30%;
-  margin: 10px;
-  /* text-align: center; */
-  font-size: 1vw;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  border: 4px solid;
-  border-color: rgb(48, 178, 238);
-  border-radius: 10px;
-}
-
-.content-box:hover {
-  background-color: rgb(176, 192, 214);
+  /* border-top: 3px solid;
+  border-color: rgb(134, 113, 255); */
 }
 
 /*CSS above runs by default i think, will change if these parameters met*/
 /*extra small, 600px or below*/
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 400px) {
   #content { 
     background-color: red;
   }
 
-  #main-content {
+  .elements {
     flex-direction: column;
-    justify-content: center;
     align-items: center;
   }
 
-  .content-box {
-    width: 90%;
-    font-size: 2vw;
+  .content-inner {
+    width: 100%;
+  }
+
+  #heading-options > p {
+    font-size: 10px;
+  }
+
+  #heading > h1 {
+    font-size: 20px;
+  }
+
+  #content h2 {
+    font-size: 15px;
   }
 }
 
 /*medium, below 900px but more than 600px*/
-@media screen and (min-width: 700px) and (max-width: 900px) {
+@media screen and (min-width: 400px) and (max-width: 700px) {
   #content {
     background-color: green;
+  }
+
+  .elements {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content-inner {
+    width: 100%;
   }
 }
