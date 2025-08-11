@@ -1,0 +1,38 @@
+.pages-elements {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.pages-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.pages-row > img {
+    width: 45%;
+    padding: 10px;
+}
+
+/*CSS above runs by default i think, will change if these parameters met*/
+/*extra small, 600px or below*/
+@media screen and (max-width: 500px) {
+  .pages-row {
+    flex-direction: column;
+  }
+  .pages-row > img {
+    width: 90%;
+  }
+}
+
+/*medium, below 900px but more than 600px*/
+/*make elements into rows of 2 instead of rows of 4*/
+@media screen and (min-width: 500px) and (max-width: 700px) {
+  .pages-row {
+    flex-direction: column;
+  }
+  .pages-row > img {
+    width: 80%;
+  }
+}
