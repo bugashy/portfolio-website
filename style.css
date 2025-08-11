@@ -17,13 +17,11 @@ body {
   width: 100%;
   height: 100%;
   display: flex;
-  /* justify-content: center; */
   align-items: center;
   flex-direction: column;
 }
 
 #content {
-  /* background-color: aqua; */
   margin-top: 80px;
   width: 80%;
   height: 80%;
@@ -38,8 +36,6 @@ body {
   width: 100%;
   height: 10%;
   padding: 10px;
-  /* border-bottom: 3px solid;
-  border-color: rgb(134, 113, 255); */
   color: rgb(2, 62, 80);
   background-color: rgb(212, 212, 233);
   z-index: 10000;
@@ -103,7 +99,6 @@ body {
 .inner-box {
   width: 50%;
   aspect-ratio: 1;
-  /* background-color: black; */
   margin: 10px;
 }
 .inner-box:hover {
@@ -142,20 +137,18 @@ body {
   padding: 20px;
   align-items: center;
   width: 100%;
-  /* border-top: 3px solid;
-  border-color: rgb(134, 113, 255); */
 }
 
 /*CSS above runs by default i think, will change if these parameters met*/
 /*extra small, 600px or below*/
 @media screen and (max-width: 500px) {
-  #content { 
-    /* background-color: red; */
-  }
-
   .elements {
     flex-direction: column;
     align-items: center;
+  }
+
+  .digital-row {
+    flex-direction: column;
   }
 
   .content-inner {
@@ -170,18 +163,21 @@ body {
     font-size: 20px;
   }
 
+  #heading p {
+    font-size: 10px;
+  }
+
   #content h2 {
     font-size: 15px;
+  }
+  #content {
+    width: 90%;
   }
 }
 
 /*medium, below 900px but more than 600px*/
 /*make elements into rows of 2 instead of rows of 4*/
 @media screen and (min-width: 500px) and (max-width: 700px) {
-  #content {
-    /* background-color: green; */
-  }
-
   .elements {
     flex-direction: column;
     align-items: center;
@@ -194,6 +190,9 @@ body {
   .content-inner {
     width: 100%;
   }
+  
+  #content {
+    width: 90%;
+  }
 }
 
-/*current this one is being skipped i think, i want the text in the heading h1 to get smaller at sub 700px but nothing happens until 500px*/
